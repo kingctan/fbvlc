@@ -146,7 +146,6 @@ void player::set_current( unsigned idx )
     if( idx < _playlist.size() ) {
         _current_idx = idx;
         _player.set_media( _playlist[_current_idx].media );
-        on_player_action( pa_current_changed );
     }
 }
 
@@ -173,8 +172,6 @@ void player::internalPlay( int idx )
         set_current( idx );
 
     _player.play();
-
-    on_player_action( pa_play );
 }
 
 bool player::play( unsigned idx )
@@ -192,15 +189,11 @@ bool player::play( unsigned idx )
 void player::pause()
 {
     _player.pause();
-
-    on_player_action( pa_pause );
 }
 
 void player::stop( bool async /*= false*/ )
 {
     _player.stop( async );
-
-    on_player_action( pa_stop );
 }
 
 void player::prev()

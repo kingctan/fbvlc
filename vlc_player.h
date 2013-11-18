@@ -14,14 +14,6 @@
 
 namespace vlc
 {
-    enum player_action_e
-    {
-        pa_play,
-        pa_pause,
-        pa_stop,
-        pa_current_changed,
-    };
-
     enum playback_mode_e
     {
         mode_normal,
@@ -86,10 +78,6 @@ namespace vlc
 
         libvlc_media_player_t* get_mp() const
             { return _player.get_mp(); }
-
-    protected:
-        //may come from another thread
-        virtual void on_player_action( player_action_e ){};
 
     private:
         static void libvlc_event_proxy( const struct libvlc_event_t* event, void* user_data);

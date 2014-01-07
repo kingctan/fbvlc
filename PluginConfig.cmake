@@ -8,12 +8,12 @@
 set(PLUGIN_NAME "FBVLC")
 set(PLUGIN_PREFIX "FBVLC")
 set(COMPANY_NAME "RSATom")
-set(PLUGIN_VERSION "0.0.8")
+set(PLUGIN_VERSION "0.1.0")
 
 #if you want embed vlc into FBVLC distribution:
 # 1) place vlc into FBVLC\Win\WiX\vlc-${VLC_VERSION}
 # 2) uncomment following line
-set(VLC_VERSION "2.0.8")
+set(VLC_VERSION "2.1.2")
 # 3) run prepXXXX.cmd from FireBreath
 
 #unfortunately current implementation does not work :(
@@ -47,7 +47,7 @@ set(FBSTRING_FileDescription "FireBreathed VLC v.${PLUGIN_VERSION}")
 set(FBSTRING_PluginDescription "VLC Web Plugin (powered by FireBreath)")
 set(FBSTRING_PLUGIN_VERSION "${PLUGIN_VERSION}")
 set(FBSTRING_LegalCopyright "Copyright 2012 RSATom")
-set(FBSTRING_PluginFileName "np${PLUGIN_NAME}.dll")
+set(FBSTRING_PluginFileName "np${PLUGIN_NAME}")
 set(FBSTRING_ProductName "FireBreathed VLC")
 set(FBSTRING_FileExtents "")
 set(FBSTRING_PluginName "FireBreathed VLC")
